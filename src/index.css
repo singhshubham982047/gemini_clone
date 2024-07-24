@@ -19,3 +19,67 @@
 .sidebar img {
   width: 20px;
 }
+
+/* Main  */
+.main {
+  @apply flex-1 min-h-[100vh] pb-[13vh] relative;
+}
+
+.nav {
+  @apply flex items-center justify-between p-4 text-xl text-[#585858];
+}
+
+.main-container {
+  @apply max-w-[900px] m-auto;
+}
+
+.greet {
+  @apply my-[6px] mx-0 text-[56px] text-[#c4c7c5] font-medium p-4;
+}
+.greet span {
+  @apply bg-gradient-to-r from-[#4b90ff] to-[#ff5546] text-transparent bg-clip-text;
+}
+
+.cards {
+  @apply grid grid-cols-auto gap-3 p-5;
+}
+
+.card {
+  @apply h-[200px] p-[15px] bg-[#f0f4f9] rounded-xl relative cursor-pointer;
+}
+
+.card > img {
+  @apply w-[35px] p-[5px] absolute bg-white rounded-[20px] bottom-[10px] right-[10px];
+}
+
+.card > p {
+  @apply text-[#585858] text-[17px];
+}
+
+.card:hover {
+  @apply bg-[#dfe4ea];
+}
+
+.main-bottom {
+  @apply absolute bottom-0 w-full max-w-[900px] py-0 px-5 m-auto;
+}
+
+.search-box {
+  @apply flex items-center justify-between gap-5 bg-[#f0f4f9] py-[10px] px-5 rounded-[50px];
+}
+
+.search-box img {
+  @apply w-6 cursor-pointer;
+}
+
+.search-box input {
+  @apply flex-1 w-full  bg-transparent outline-none border-none p-2;
+}
+
+.search-box div {
+  @apply flex items-center gap-4;
+}
+
+.bottom_info {
+  @apply text-[13px] my-[15px] mx-auto text-center font-light;
+}
