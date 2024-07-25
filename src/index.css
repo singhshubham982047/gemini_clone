@@ -12,12 +12,39 @@
 }
 
 #root {
-  min-height: 100vh;
-  display: flex;
+  @apply min-h-[100vh] flex animate-fadeIn;
 }
 
+/* sidebar */
+
+.sidebar {
+  @apply hidden  min-h-[100vh] md:inline-flex flex-col justify-between bg-[#f0f4f9] py-[25px] px-[15px] text-sm;
+}
+
+.menu {
+  @apply block ml-[10px] cursor-pointer;
+}
+
+.new-chat {
+  @apply mt-5 inline-flex items-center gap-[10px] py-[8px] px-4 bg-[#e6eaf1] rounded-full text-gray-500 cursor-pointer;
+}
 .sidebar img {
-  width: 20px;
+  @apply w-5;
+}
+
+.recent {
+  @apply flex flex-col animate-fadeIn;
+}
+.recent-title {
+  @apply mt-[30px] mb-[20px];
+}
+
+.recent-entry {
+  @apply flex  items-start  gap-[10px] p-[10px]  rounded-full text-[#282828] cursor-pointer hover:bg-[#e2e6eb];
+}
+
+.bottom {
+  @apply flex flex-col;
 }
 
 /* Main  */
@@ -65,21 +92,58 @@
 }
 
 .search-box {
-  @apply flex items-center justify-between gap-5 bg-[#f0f4f9] py-[10px] px-5 rounded-[50px];
+  @apply flex py-[5px] px-[10px] items-center justify-between sm:gap-5 bg-[#f0f4f9] sm:py-[10px] sm:px-5 rounded-[50px];
 }
 
 .search-box img {
-  @apply w-6 cursor-pointer;
+  @apply w-5 sm:w-6 cursor-pointer;
 }
 
 .search-box input {
-  @apply flex-1 w-full  bg-transparent outline-none border-none p-2;
+  @apply flex-none w-[150px]  sm:flex-1 sm:w-full  bg-transparent outline-none border-none p-2;
 }
 
 .search-box div {
-  @apply flex items-center gap-4;
+  @apply flex items-center gap-[5px] sm:gap-4;
 }
 
 .bottom_info {
   @apply text-[13px] my-[15px] mx-auto text-center font-light;
+}
+
+.result {
+  @apply py-0 px-[5%] max-h-[70vh] overflow-y-scroll;
+}
+
+.result::-webkit-scrollbar {
+  display: none;
+}
+
+.result-title {
+  @apply my-[40px] mx-0 flex items-center gap-5;
+}
+
+.result img {
+  @apply w-10 rounded-full;
+}
+
+.result-data {
+  @apply flex items-start gap-5;
+}
+
+.loader {
+  @apply flex w-full flex-col gap-3;
+}
+
+.loader hr {
+  @apply rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-[#ffffff] to-[#9ed7ff]
+  bg-[length:800px_50px] h-5 animate-loading;
+}
+
+.result-data p {
+  @apply text-[17px] font-light leading-[1.8];
+}
+
+.result-data b {
+  @apply text-[18px] font-medium;
 }
